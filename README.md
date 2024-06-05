@@ -1,8 +1,8 @@
-# Nullboard
+<h1><img src="extras/favicon-16.png" alt="icon" height="24px" /> Nullboard</h1>
 
 Nullboard is a minimalist take on a kanban board / a task list manager, designed to be compact, readable and quick in use.
 
-https://nullboard.io/preview
+<https://nullboard.io/preview>
 
 ![Nullboard](images/nullboard-example-alt.png)
 
@@ -117,7 +117,7 @@ Pieces of **paper** were almost there, but rearranging items can be quite a hass
 
 So finally got annoyed enough to sit down and write exactly what I wanted.
 
-And, voilà, Nullboard came out  =>  https://nullboard.io/preview
+And, voilà, Nullboard came out  =>  <https://nullboard.io/preview>
 
 ## License
 
@@ -129,4 +129,4 @@ That is, you can use, change and re-distribute it for as long as you don't try a
 
 Primary feed is through [@nullboard](https://twitter.com/nullboard) on Twitter.
 
-The changelog is here => https://nullboard.io/changes
+The changelog is here => <https://nullboard.io/changes>
