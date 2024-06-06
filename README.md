@@ -2,18 +2,39 @@
 
 Nullboard is a minimalist take on a kanban board / a task list manager, designed to be compact, readable and quick in use.
 
-<https://nullboard.io/preview>
-
-![Nullboard](images/nullboard-example-alt.png)
-
 The name also happens to abbreviate to [NB](https://en.wikipedia.org/wiki/Nota_bene), which I think is a nice touch.
 
-## Dead simple
+<!--
+Visit the demo/preview: <https://nullboard.io/preview>
+-->
+
+<p align=center>
+<br />
+<a href="https://semanticdata.github.io/nullboard/">
+<img src="https://img.shields.io/badge/Check%20out%20the%20Demo-F0E68C?style=for-the-badge&link=https%3A%2F%2Fsemanticdata.github.io%2Fnullboard%2F" alt="demo" height="34px"; />
+</a>
+</p>
+
+<!--
+![Nullboard](images/nullboard-example-alt.png)
+-->
+
+## 🖼 Screenshot
+
+<div align=center>
+
+| ![screenshot](images/nullboard-example-alt.png) |
+| --- |
+</div>
+
+## ✨ Features
+
+### Dead simple
 
 * Single-page web app - just one HTML file, an ancient jQuery package and a webfont pack.
 * Can be used completely offline. In fact, it's written exactly with this use in mind.
 
-## Locally stored
+### Locally stored
 
 * All data is stored locally, for now using [localStorage](https://developer.mozilla.org/en/docs/Web/API/Window/localStorage).
 * The data can be exported to- or imported from a plain text file in a simple JSON format.
@@ -22,15 +43,9 @@ The name also happens to abbreviate to [NB](https://en.wikipedia.org/wiki/Nota_b
   * [Nullboard Agent Express Port](https://github.com/justinpchang/nullboard-agent-express) - an express.js-based portable app
   * [nbagent](https://github.com/luismedel/nbagent) - a version for Unix systems, in Python
 
-## Beta
+### UI & UX
 
-Still very much in beta. Caveat emptor and all that.
-
-## UI & UX
-
-The whole thing is largely about making it convenient to use.
-
-Everything is editable in place, all changes are saved automatically and last 50 revisions are kept for undo/redo:
+The whole thing is largely about making it convenient to use. Everything is editable in place, all changes are saved automatically and last 50 revisions are kept for undo/redo:
 
 ![In-place editing](images/nullboard-inplace-editing.gif)
 
@@ -84,7 +99,7 @@ Also:
 * Undo/redo for 50 revisions per board (configurable in the code)
 * Keyboard shortcuts, including Tab'ing through notes
 
-## Caveats
+### Caveats
 
 * Written for desktop and keyboard/mouse use
 * Essentially untested on mobile devices and against tap/touch input
@@ -93,40 +108,31 @@ Also:
 
 You spot a bug, file an issue.
 
-## Dockerized version
+### Dockerized version
 
 See [this fork](https://github.com/rsoper/nullboard).
 
+<!--
 ## Background
 
-Nullboard is something that handles ToDo lists in the way that works really well. For *me* that is.
+Nullboard is something that handles ToDo lists in the way that works really well. For *me* that is. Tried a lot of options, some were almost *it*, but none was 100%.
 
-Tried a lot of options, some were almost *it*, but none was 100%.
+- **Trello** wasn't bad, but never was comfortable with the idea of storing my data in cloud without any actual need.
+- **Wekan** looked promising, but ultimately too heavy and had no offline usage support or a local storage option.
+- **Things** was beautiful, but not the right tool for the job.
+- **Inkscape** - I kid you not - with a laundry list of text items was actually OK, but didn't scale well.
 
-**Trello** wasn't bad, but never was comfortable with the idea of storing my data in cloud without any actual need.
-
-**Wekan** looked promising, but ultimately too heavy and had no offline usage support or a local storage option.
-
-**Things** was beautiful, but not the right tool for the job.
-
-**Inkscape** - I kid you not - with a laundry list of text items was actually OK, but didn't scale well.
-
-Ditto for the plain **text files**.
-
-Pieces of **paper** were almost there, but rearranging items can be quite a hassle.
+Ditto for the plain **text files**. Pieces of **paper** were almost there, but rearranging items can be quite a hassle.
 
 So finally got annoyed enough to sit down and write exactly what I wanted.
 
 And, voilà, Nullboard came out  =>  <https://nullboard.io/preview>
+-->
 
-## License
+## 🔁 Changelog
 
-The [2-clause BSD license](https://opensource.org/licenses/BSD-2-Clause/) with the [Commons Clause](https://commonsclause.com/).
+The changelog can be found here => <https://nullboard.io/changes>.
 
-That is, you can use, change and re-distribute it for as long as you don't try and sell it.
+## © License
 
-## Updates
-
-Primary feed is through [@nullboard](https://twitter.com/nullboard) on Twitter.
-
-The changelog is here => <https://nullboard.io/changes>
+Source code in this repository is available under the [2-Clause BSD License](https://opensource.org/licenses/BSD-2-Clause/) and the [Commons Clause](https://commonsclause.com/). This means you can use it, change it, and re-distribute it as long as you don't sell it.
