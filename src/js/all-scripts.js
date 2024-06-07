@@ -32,19 +32,19 @@ function AppConfig() {
   this.board = null; // active board
   this.backups = {
     agents: [], // [ { type, id, enabled, conf } ];
-    nextId: 1
+    nextId: 1,
   };
   this.backupStatus = {}; // agentId => [ 'conf' ]
 }
 const default_backup_agents = [
   {
     base: "http://127.0.0.1:10001",
-    auth: ""
+    auth: "",
   }, // local agent
   {
     base: "",
-    auth: ""
-  } // remote agent
+    auth: "",
+  }, // remote agent
 ];
 //
 function BoardMeta() {
@@ -61,7 +61,7 @@ class Storage {
     this.boardIndex = new Map();
     this.backups = {
       status: "", // '', 'ok', 'busy', 'failed'
-      agents: [] // BackupStorage instances
+      agents: [], // BackupStorage instances
     };
   }
   open() {
@@ -311,14 +311,14 @@ class Storage {
         type: simp,
         id: simp + "-" + conf.backups.nextId++,
         enabled: def[0].base && def[0].auth,
-        conf: def[0]
+        conf: def[0],
       });
       conf.backups.agents.push({
         // remote
         type: simp,
         id: simp + "-" + conf.backups.nextId++,
         enabled: def[1].base && def[1].auth,
-        conf: def[1]
+        conf: def[1],
       });
       this.saveConfig();
     }
@@ -534,7 +534,7 @@ class BackupStorage {
     this.lastXhr = {
       op: "",
       text: "",
-      code: 0
+      code: 0,
     };
     this.onStatusChange = onStatusChange;
     this.queue = [];
@@ -558,7 +558,7 @@ class SimpleBackup extends BackupStorage {
     this.type = "simp";
     this.conf = {
       base: "",
-      auth: ""
+      auth: "",
     };
     this.conf = Object.assign(this.conf, conf);
   }
@@ -570,14 +570,14 @@ class SimpleBackup extends BackupStorage {
         url: this.conf.base + "/config",
         type: "put",
         headers: {
-          "X-Access-Token": this.conf.auth
+          "X-Access-Token": this.conf.auth,
         },
         data: {
-          self: document.location.href
+          self: document.location.href,
           //	conf: -- without the data --
         },
-        dataType: "json"
-      }
+        dataType: "json",
+      },
     });
     this.runQueue();
   }
@@ -589,14 +589,14 @@ class SimpleBackup extends BackupStorage {
         url: this.conf.base + "/config",
         type: "put",
         headers: {
-          "X-Access-Token": this.conf.auth
+          "X-Access-Token": this.conf.auth,
         },
         data: {
           self: document.location.href,
-          conf: JSON.stringify(conf)
+          conf: JSON.stringify(conf),
         },
-        dataType: "json"
-      }
+        dataType: "json",
+      },
     });
     this.runQueue();
   }
@@ -608,15 +608,15 @@ class SimpleBackup extends BackupStorage {
         url: this.conf.base + "/board/" + id,
         type: "put",
         headers: {
-          "X-Access-Token": this.conf.auth
+          "X-Access-Token": this.conf.auth,
         },
         data: {
           self: document.location.href,
           data: data ? JSON.stringify(data) : null,
-          meta: meta ? JSON.stringify(meta) : null
+          meta: meta ? JSON.stringify(meta) : null,
         },
-        dataType: "json"
-      }
+        dataType: "json",
+      },
     });
     this.runQueue();
   }
@@ -628,9 +628,9 @@ class SimpleBackup extends BackupStorage {
         url: this.conf.base + "/board/" + id,
         type: "delete",
         headers: {
-          "X-Access-Token": this.conf.auth
-        }
-      }
+          "X-Access-Token": this.conf.auth,
+        },
+      },
     });
     this.runQueue();
   }
@@ -661,7 +661,7 @@ class SimpleBackup extends BackupStorage {
       (code ? `Response code ${code}` : "Offline or CORS-blocked");
     this.lastXhr = {
       text: text,
-      code: code
+      code: code,
     };
     if (req.cb) req.cb.call(this, ok);
     if (!this.queue.length) {
@@ -724,13 +724,13 @@ function Drag2() {
   this.priming = null;
   this.primeXY = {
     x: 0,
-    y: 0
+    y: 0,
   };
   this.$drag = null;
   this.mouseEv = null;
   this.delta = {
     x: 0,
-    y: 0
+    y: 0,
   };
   this.inSwap = 0;
   // api
@@ -745,7 +745,7 @@ function Drag2() {
     );
     this.primeXY = {
       x: ev.clientX,
-      y: ev.clientY
+      y: ev.clientY,
     };
     this.mouseEv = ev;
   };
@@ -782,7 +782,7 @@ function Drag2() {
     this.delta.y = pos.top - this.mouseEv.clientY - scroll_y;
     this.adjustDrag();
     $drag.css({
-      opacity: 1
+      opacity: 1,
     });
     $("body").addClass("dragging");
   };
@@ -797,7 +797,7 @@ function Drag2() {
     var drag_y = drag.mouseEv.clientY + drag.delta.y + scroll_y;
     $drag.offset({
       left: drag_x,
-      top: drag_y
+      top: drag_y,
     });
     if (drag.inSwap) return;
     /*
@@ -863,7 +863,7 @@ function Drag2() {
     var $have = $(have);
     var $want = $have.clone();
     $want.css({
-      display: "none"
+      display: "none",
     });
     if (targetItem) {
       if (before) {
@@ -915,20 +915,20 @@ function Drag2() {
       if (delta < 0) d_bulk = -d_bulk;
       else d_have = -d_have;
       $have.parent().css({
-        position: "relative"
+        position: "relative",
       });
       $have.css({
         position: "relative",
-        "z-index": 0
+        "z-index": 0,
       });
       $bulk.css({
         position: "relative",
-        "z-index": 1
+        "z-index": 1,
       });
       drag.inSwap = 1 + $bulk.length;
       $have.animate(
         {
-          top: d_have
+          top: d_have,
         },
         drag.swapAnimMs,
         function () {
@@ -937,7 +937,7 @@ function Drag2() {
       );
       $bulk.animate(
         {
-          top: d_bulk
+          top: d_bulk,
         },
         drag.swapAnimMs,
         function () {
@@ -947,14 +947,14 @@ function Drag2() {
 
       function swapCleanUp() {
         $have.parent().css({
-          position: ""
+          position: "",
         });
         $have.remove();
         $want.show();
         $bulk.css({
           position: "",
           "z-index": "",
-          top: ""
+          top: "",
         });
         drag.adjustDrag();
       }
@@ -1066,7 +1066,7 @@ function deleteNote($note) {
   $note
     .animate(
       {
-        opacity: 0
+        opacity: 0,
       },
       "fast"
     )
@@ -1109,7 +1109,7 @@ function deleteList($list) {
   if (!empty && !confirm("Delete this list and all its notes?")) return;
   $list
     .animate({
-      opacity: 0
+      opacity: 0,
     })
     .queue(function () {
       $list.remove();
@@ -1126,22 +1126,22 @@ function moveList($list, left) {
   var pos_a = $a.offset().left;
   var pos_b = $b.offset().left;
   $a.css({
-    position: "relative"
+    position: "relative",
   });
   $b.css({
-    position: "relative"
+    position: "relative",
   });
   $menu_a.hide();
   $menu_b.hide();
   $a.animate(
     {
-      left: pos_b - pos_a + "px"
+      left: pos_b - pos_a + "px",
     },
     "fast"
   );
   $b.animate(
     {
-      left: pos_a - pos_b + "px"
+      left: pos_a - pos_b + "px",
     },
     "fast",
     function () {
@@ -1149,17 +1149,17 @@ function moveList($list, left) {
       else $list.before($list.next());
       $a.css({
         position: "",
-        left: ""
+        left: "",
       });
       $b.css({
         position: "",
-        left: ""
+        left: "",
       });
       $menu_a.css({
-        display: ""
+        display: "",
       });
       $menu_b.css({
-        display: ""
+        display: "",
       });
       saveBoard();
     }
@@ -1205,7 +1205,7 @@ function closeBoard(quick) {
     $board
       .animate(
         {
-          opacity: 0
+          opacity: 0,
         },
         "fast"
       )
@@ -1320,11 +1320,11 @@ function showBoard(quick) {
     $wrap
       .html("")
       .css({
-        opacity: 0
+        opacity: 0,
       })
       .append($b)
       .animate({
-        opacity: 1
+        opacity: 1,
       });
   updatePageTitle();
   updateUndoRedo();
@@ -1395,7 +1395,7 @@ function exportBoard() {
   blob = "data:application/octet-stream," + blob;
   return {
     blob: blob,
-    file: file
+    file: file,
   };
 }
 
@@ -1515,7 +1515,7 @@ function setBackupConfigUi($div, backupConf) {
   }
   $status.find("input").val(text);
   $status.css({
-    display: "block"
+    display: "block",
   });
 }
 
@@ -1528,7 +1528,7 @@ function getBackupConfigUi() {
   var $rem = $div.find(".rem");
   var ret = {
     loc: jsonClone(loc),
-    rem: jsonClone(rem)
+    rem: jsonClone(rem),
   };
   ret.loc.enabled = !$loc.hasClass("off");
   ret.loc.conf.auth = $loc.find(".auth").val();
@@ -1598,12 +1598,12 @@ function configBackups() {
       $opt
         .find(".etc")
         .css({
-          opacity: 0
+          opacity: 0,
         })
         .slideDown("fast")
         .animate(
           {
-            opacity: 1
+            opacity: 1,
           },
           "fast"
         )
@@ -1624,7 +1624,7 @@ function configBackups() {
         .find(".etc")
         .animate(
           {
-            opacity: 0
+            opacity: 0,
           },
           "fast"
         )
@@ -1635,7 +1635,7 @@ function configBackups() {
             $div.addClass("off");
           $(this)
             .css({
-              opacity: ""
+              opacity: "",
             })
             .dequeue();
         });
@@ -1794,7 +1794,7 @@ function updateBoardIndex() {
   boards.forEach(function (meta, id) {
     index.push({
       id: id,
-      meta: meta
+      meta: meta,
     });
   });
   index.sort(function (a, b) {
@@ -1877,37 +1877,37 @@ function removeTextSelection() {
 
 function shakeControl($x) {
   $x.css({
-    position: "relative"
+    position: "relative",
   })
     .focus()
     .animate(
       {
-        left: "+4px"
+        left: "+4px",
       },
       60
     )
     .animate(
       {
-        left: "-3px"
+        left: "-3px",
       },
       60
     )
     .animate(
       {
-        left: "+2px"
+        left: "+2px",
       },
       60
     )
     .animate(
       {
-        left: "0px"
+        left: "0px",
       },
       60
     )
     .queue(function () {
       $x.css({
         position: "",
-        left: ""
+        left: "",
       }).dequeue();
     });
 }
@@ -1992,17 +1992,17 @@ function showOverlay($div) {
     .append($div)
     .css({
       opacity: 0,
-      display: "flex"
+      display: "flex",
     })
     .animate({
-      opacity: 1
+      opacity: 1,
     });
 }
 
 function hideOverlay() {
   $(".overlay").animate(
     {
-      opacity: 0
+      opacity: 0,
     },
     function () {
       $(this).hide();
@@ -2043,12 +2043,12 @@ function formatLicense() {
   var links = [
     {
       text: "2-clause BSD license",
-      href: "https://opensource.org/licenses/BSD-2-Clause/"
+      href: "https://opensource.org/licenses/BSD-2-Clause/",
     },
     {
       text: "Commons Clause",
-      href: "https://commonsclause.com/"
-    }
+      href: "https://commonsclause.com/",
+    },
   ];
   links.forEach(function (l) {
     bulk = bulk.replace(
@@ -2155,16 +2155,16 @@ function initDragAndDrop() {
     if (started) {
       var $drag = drag.$drag;
       $(".config .teaser").css({
-        display: "none"
+        display: "none",
       });
       $(".config .bulk").css({
         display: "block",
-        opacity: 1
+        opacity: 1,
       });
       $drag.html($(this.item).html());
     } else {
       $(".config .teaser").css({
-        display: ""
+        display: "",
       });
       $(".config .bulk")
         .show()
@@ -2173,7 +2173,7 @@ function initDragAndDrop() {
           $(this)
             .css({
               display: "",
-              opacity: ""
+              opacity: "",
             })
             .dequeue();
         });
@@ -2725,7 +2725,7 @@ var NB = {
     var conf = this.storage.getConfig();
     conf[name] = val;
     return this.storage.saveConfig();
-  }
+  },
 };
 NB.storage = new Storage_Local();
 if (!NB.storage.open()) {

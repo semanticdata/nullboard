@@ -340,7 +340,7 @@ body.dragging {
   display: none;
 }
 
-.board > .head {
+.board>.head {
   background: #eaedf0;
   padding: 5px;
   margin: 0 0 10px;
@@ -348,7 +348,7 @@ body.dragging {
   position: relative;
 }
 
-.board > .head .menu {
+.board>.head .menu {
   margin-right: 5px;
 }
 
@@ -607,8 +607,7 @@ body.dragging {
   background: #fff;
 }
 
-.board .note.raw .text {
-}
+.board .note.raw .text {}
 
 /***/
 .board .note.collapsed {
@@ -1059,7 +1058,7 @@ body.dragging {
   justify-content: center;
 }
 
-.overlay > div {
+.overlay>div {
   font-size: calc(12rem / 11);
   line-height: calc(16 / 12);
   background: #fff;
@@ -1070,7 +1069,7 @@ body.dragging {
 }
 
 /***/
-.overlay > div.license {
+.overlay>div.license {
   white-space: pre-wrap;
   padding: 20px 25px 22px;
   overflow-y: auto;
@@ -1079,34 +1078,34 @@ body.dragging {
   /* 402px, 476px */
 }
 
-.overlay > div.license a {
+.overlay>div.license a {
   color: #1489db;
 }
 
-.overlay > div.license span {
+.overlay>div.license span {
   display: inline-block;
   padding-right: 8px;
 }
 
 /***/
-.overlay > div.about {
+.overlay>div.about {
   text-align: center;
   padding: 50px 50px;
   position: relative;
 }
 
-.overlay > div.about h1 {
+.overlay>div.about h1 {
   font-size: calc(15rem / 11);
   font-weight: 500;
   margin-bottom: 10px;
 }
 
-.overlay > div.about a {
+.overlay>div.about a {
   display: block;
   color: #1489db;
 }
 
-.overlay > div.about div {
+.overlay>div.about div {
   position: absolute;
   bottom: -30px;
   left: 0;
@@ -1114,7 +1113,7 @@ body.dragging {
   color: #fff9;
 }
 
-.overlay > div.about div span {
+.overlay>div.about div span {
   display: inline-block;
   text-align: left;
   padding-right: 10px;
@@ -1283,6 +1282,7 @@ body.dragging {
 /***/
 
 @media print {
+
   .logo,
   .config,
   .board .head .teaser,
@@ -1353,7 +1353,7 @@ body.dragging {
   color: #bf9d21;
 }
 
-.theme-dark .board > .head {
+.theme-dark .board>.head {
   box-shadow: 0 0 2px #fff1 inset;
 }
 
@@ -1472,7 +1472,7 @@ body.dragging {
   color: #fc2;
 }
 
-.theme-dark .logo > a:hover {
+.theme-dark .logo>a:hover {
   color: #fff;
 }
 
