@@ -9,7 +9,7 @@ html {
     /* font-size of board heading */
     --fs-nops: 9;
     /* font-size of the note ops */
-    --lw: calc(20 * var(--fs) + 30); /* default: calc(20 * var(--fs) + 30) */
+    --lw: calc(20 * var(--fs) + 50); /* default: calc(20 * var(--fs) + 30) */
     /* .list width */
 }
 
@@ -130,3 +130,5 @@ body.dragging {
     -ms-user-select: none;
     user-select: none;
 }
+
+/* CUSTOM CSS PAST HERE */
