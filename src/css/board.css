@@ -9,8 +9,10 @@
     width: intrinsic;
     /* safari  */
 
-    margin: 0 auto;
-    padding: 20px;
+    margin-inline: auto;
+    /* margin: 0 auto; */
+    padding: 1.5rem;
+    /* padding: 20px; */
 
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -21,7 +23,8 @@
 }
 
 .crowded .board {
-    margin-top: 28px;
+    margin-top: 2.5rem;
+    /* margin-top: 28px; */
 }
 
 .board u {
