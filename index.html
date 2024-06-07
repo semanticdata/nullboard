@@ -59,88 +59,90 @@
   </head>
 
   <body>
-    <div class="logo">
-      <a class="site" href="https://nullboard.io">Nullboard</a>
-      <i class="alert"></i>
-      <div class="bulk">
-        <a href="#" class="view-about">About</a>
-        <a href="#" class="view-license">License</a>
-        <a
-          href="https://nullboard.io/changes"
-          target="_blank"
-          class="view-changes"
-          >Changes</a
-        >
-        <a href="https://nullboard.io/github" target="_blank">Github</a>
-        <a href="https://nullboard.io/twitter" target="_blank">Twitter</a>
+    <header>
+      <!-- Site Logo -->
+      <div class="logo">
+        <a class="site" href="https://nullboard.io">Nullboard</a>
+        <i class="alert"></i>
+        <div class="bulk">
+          <a href="#" class="view-about">About</a>
+          <a href="#" class="view-license">License</a>
+          <a
+            href="https://nullboard.io/changes"
+            target="_blank"
+            class="view-changes"
+            >Changes</a
+          >
+          <a href="https://nullboard.io/github" target="_blank">Github</a>
+          <a href="https://nullboard.io/twitter" target="_blank">Twitter</a>
+        </div>
       </div>
-    </div>
 
-    <div class="config no-user-select">
-      <a href="#" class="teaser"><i>&equiv;</i><u>&#x2714;</u></a>
-      <div class="bulk">
-        <a href="#" class="add-board">Add new board...</a>
+      <!-- Site Menu -->
+      <div class="config no-user-select">
+        <a href="#" class="teaser"><i>&equiv;</i><u>&#x2714;</u></a>
+        <div class="bulk">
+          <a href="#" class="add-board">Add new board...</a>
 
-        <!-- Boards -->
-        <div class="boards" draggable="false"></div>
+          <!-- Boards -->
+          <div class="boards" draggable="false"></div>
 
-        <a href="#" class="exp-board">Export current board...</a>
-        <a href="#" class="imp-board">Import boards...</a>
-        <input class="imp-board-select" type="file" accept=".nbx" />
+          <a href="#" class="exp-board">Export current board...</a>
+          <a href="#" class="imp-board">Import boards...</a>
+          <input class="imp-board-select" type="file" accept=".nbx" />
 
-        <a href="#" class="auto-backup">Auto-backup...</a>
+          <a href="#" class="auto-backup">Auto-backup...</a>
 
-        <div class="section ui-prefs break">
-          <a href="#" class="title">UI preferences<u>...</u></a>
-          <div class="details">
-            <a href="#" class="switch-font active break" font="barlow"
-              >Use Barlow</a
-            >
-            <a href="#" class="switch-font" font="ibm-plex"
-              >Use IBM Plex Sans</a
-            >
-            <a href="#" class="switch-font" font="open-sans">Use Open Sans</a>
-            <a href="#" class="switch-font" font="segoe-ui">Use Segoe UI</a>
-            <a href="#" class="switch-font" font="maven-pro">Use Maven Pro</a>
+          <div class="section ui-prefs break">
+            <a href="#" class="title">UI preferences<u>...</u></a>
+            <div class="details">
+              <a href="#" class="switch-font active break" font="barlow"
+                >Use Barlow</a
+              >
+              <a href="#" class="switch-font" font="ibm-plex"
+                >Use IBM Plex Sans</a
+              >
+              <a href="#" class="switch-font" font="open-sans">Use Open Sans</a>
+              <a href="#" class="switch-font" font="segoe-ui">Use Segoe UI</a>
+              <a href="#" class="switch-font" font="maven-pro">Use Maven Pro</a>
 
-            <div class="f-prefs break">
-              <table>
-                <tr class="ui-fs">
-                  <td class="name">Font size:</td>
-                  <td><a href="#" class="less">&lt;</a></td>
-                  <td class="val"></td>
-                  <td><a href="#" class="more">&gt;</a></td>
-                </tr>
-                <tr class="ui-lh">
-                  <td class="name">Line height:</td>
-                  <td><a href="#" class="less">&lt;</a></td>
-                  <td class="val"></td>
-                  <td><a href="#" class="more">&gt;</a></td>
-                </tr>
-                <tr class="ui-lw">
-                  <td class="name">List width:</td>
-                  <td><a href="#" class="less">&lt;</a></td>
-                  <td class="val"></td>
-                  <td><a href="#" class="more">&gt;</a></td>
-                </tr>
-              </table>
+              <div class="f-prefs break">
+                <table>
+                  <tr class="ui-fs">
+                    <td class="name">Font size:</td>
+                    <td><a href="#" class="less">&lt;</a></td>
+                    <td class="val"></td>
+                    <td><a href="#" class="more">&gt;</a></td>
+                  </tr>
+                  <tr class="ui-lh">
+                    <td class="name">Line height:</td>
+                    <td><a href="#" class="less">&lt;</a></td>
+                    <td class="val"></td>
+                    <td><a href="#" class="more">&gt;</a></td>
+                  </tr>
+                  <tr class="ui-lw">
+                    <td class="name">List width:</td>
+                    <td><a href="#" class="less">&lt;</a></td>
+                    <td class="val"></td>
+                    <td><a href="#" class="more">&gt;</a></td>
+                  </tr>
+                </table>
+              </div>
+
+              <a href="#" class="switch-theme break"
+                >Use <i>light</i><b>dark</b> theme</a
+              >
             </div>
-
-            <a href="#" class="switch-theme break"
-              >Use <i>light</i><b>dark</b> theme</a
-            >
           </div>
         </div>
       </div>
-    </div>
-    <!-- </div> -->
+    </header>
 
     <div class="wrap"></div>
 
     <div class="overlay"></div>
 
-    <!-- default was <tt> which is deprecated -->
-    <!-- <tt> -->
+    <!-- <pre> was <tt> which is deprecated -->
     <pre>
       <!-- templates -->
       <div class="board">
@@ -251,7 +253,6 @@
         </div>
       </div>
     </pre>
-    <!-- </tt> -->
 
     <!-- Let there be scripts! -->
     <script src="src/js/jquery-3.7.1.min.js"></script>
