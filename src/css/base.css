@@ -1,15 +1,15 @@
 html {
     --ff: f-barlow, sans-serif;
 
-    --fs: 11;
+    --fs: 14; /* default: 11 */
     /* font-size   */
     --lh: calc(var(--fs) * 1.25);
     /* line-height */
-    --fs-head: 13.6;
+    --fs-head: 14; /* default: 13.6 */
     /* font-size of board heading */
     --fs-nops: 9;
     /* font-size of the note ops */
-    --lw: calc(20 * var(--fs) + 30);
+    --lw: calc(20 * var(--fs) + 30); /* default: calc(20 * var(--fs) + 30) */
     /* .list width */
 }
 
