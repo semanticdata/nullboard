@@ -1,0 +1,236 @@
+/***/
+.overlay {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: #000;
+
+    display: none;
+    /* flex */
+    justify-content: center;
+}
+
+.overlay>div {
+    font-size: calc(12rem / 11);
+    line-height: calc(16 / 12);
+    background: #fff;
+    align-self: start;
+    margin-top: 100px;
+    border-radius: 1px;
+    box-shadow: 0 2px 6px #000;
+}
+
+/***/
+.overlay>div.license {
+    white-space: pre-wrap;
+    padding: 20px 25px 22px;
+    overflow-y: auto;
+
+    width: calc((var(--fs) * 36 + 6) * 1px);
+    /* 402px, 476px */
+}
+
+.overlay>div.license a {
+    color: #1489db;
+}
+
+.overlay>div.license span {
+    display: inline-block;
+    padding-right: 8px;
+}
+
+/***/
+.overlay>div.about {
+    text-align: center;
+    padding: 50px 50px;
+    position: relative;
+}
+
+.overlay>div.about h1 {
+    font-size: calc(15rem / 11);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.overlay>div.about a {
+    display: block;
+    color: #1489db;
+}
+
+.overlay>div.about div {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    color: #fff9;
+}
+
+.overlay>div.about div span {
+    display: inline-block;
+    text-align: left;
+    padding-right: 10px;
+}
+
+/***/
+
+.overlay .backup-conf {
+    padding: 20px 40px;
+    min-width: 300px;
+    position: relative;
+}
+
+.overlay .backup-conf .close {
+    position: absolute;
+    top: 0px;
+    right: 12px;
+    font-size: calc(22rem / 11);
+    color: #000;
+    opacity: 0.3;
+    transition: opacity 300ms;
+}
+
+.overlay .backup-conf .close:hover {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.overlay .backup-conf h3 {
+    font-size: calc(15rem / 11);
+    font-weight: 500;
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.overlay .backup-conf .what {
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #888;
+    margin: 0 -10px 20px;
+    padding: 0 10px 30px;
+}
+
+.overlay .backup-conf .what a {
+    color: #1489db;
+}
+
+.overlay .backup-conf .opt {
+    margin-top: 5px;
+}
+
+.overlay .backup-conf .opt:before {
+    --col: #333;
+
+    content: " ";
+    display: inline-block;
+    margin-top: -1px;
+
+    display: inline-block;
+    content: " ";
+    width: calc(9rem / 11);
+    height: calc(9rem / 11);
+    margin-right: 8px;
+
+    position: relative;
+    top: 1px;
+    background: var(--col);
+    border: 1px solid var(--col);
+    border-radius: 1px;
+    box-shadow: 0 2px 0 #fff inset, 0 -2px 0 #fff inset, 2px 0 0 #fff inset,
+        -2px 0 0 #fff inset;
+}
+
+.overlay .backup-conf .opt:hover:before {
+    --col: #1489db;
+}
+
+.overlay .backup-conf .off .opt:before {
+    background: #fff;
+}
+
+.overlay .backup-conf .opt:hover {
+    color: #1489db;
+}
+
+.overlay .backup-conf .opt {
+    cursor: pointer;
+}
+
+.overlay .backup-conf .etc {
+    margin-top: 3px;
+    margin-bottom: 10px;
+    margin-left: calc(9rem / 22);
+    padding: 2px 0 0 14px;
+    border-left: 1px solid #888;
+}
+
+.overlay .backup-conf .off .etc {
+    display: none;
+}
+
+.overlay .backup-conf .etc span {
+    display: inline-block;
+    min-width: calc(3px + var(--fs) * 7px);
+    margin-right: calc(var(--fs) * 1px);
+}
+
+.overlay .backup-conf .etc input {
+    display: inline-block;
+    width: 170px;
+    padding: 0 5px;
+    line-height: calc(20 / 11);
+    margin-bottom: 3px;
+    border: 1px solid #ccc;
+}
+
+.overlay .backup-conf .etc input:focus {
+    border-bottom: 1px solid #888;
+}
+
+.overlay .backup-conf .etc input::placeholder {
+    font-weight: 400;
+    font-size: calc(10rem / 11);
+    line-height: calc(20 / 10);
+    text-transform: uppercase;
+    color: #000;
+    opacity: 0.4;
+}
+
+.overlay .backup-conf .etc .status {
+    display: none;
+    margin: 0;
+}
+
+.overlay .backup-conf .etc .status input {
+    color: #222;
+    background: #0000000e;
+    border: 1px solid transparent;
+}
+
+.overlay .backup-conf .etc .status.error input {
+    color: #d20;
+    background: #dd220018;
+}
+
+.overlay .backup-conf .save {
+    display: block;
+    text-align: center;
+    margin: 20px -10px 5px;
+    padding: 20px 10px 0;
+    border-top: 1px solid #888;
+    word-spacing: 30px;
+    position: relative;
+}
+
+.overlay .backup-conf .save a {
+    color: #1489db;
+}
+
+.overlay .backup-conf.off .save .check {
+    color: #aaa;
+    pointer-events: none;
+    cursor: default;
+}

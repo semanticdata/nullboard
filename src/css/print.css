@@ -1,0 +1,33 @@
+/***/
+@media print {
+
+  .logo,
+  .config,
+  .board .head .teaser,
+  .list .head .teaser {
+    visibility: hidden;
+    display: none;
+  }
+
+  .board .note {
+    box-shadow: none;
+    text-shadow: none !important;
+    outline: 1px solid #888;
+  }
+
+  .list {
+    outline: 1px solid #555;
+  }
+
+  .board .note .raw {
+    outline: none;
+    text-shadow: none;
+  }
+
+  .board .head .text a,
+  .board .note .text a {
+    color: #333;
+    text-shadow: none;
+    text-decoration: underline;
+  }
+}

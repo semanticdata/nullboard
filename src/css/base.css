@@ -1,0 +1,132 @@
+html {
+    --ff: f-barlow, sans-serif;
+
+    --fs: 11;
+    /* font-size   */
+    --lh: calc(var(--fs) * 1.25);
+    /* line-height */
+    --fs-head: 13.6;
+    /* font-size of board heading */
+    --fs-nops: 9;
+    /* font-size of the note ops */
+    --lw: calc(20 * var(--fs) + 30);
+    /* .list width */
+}
+
+html,
+body,
+input,
+textarea {
+    font-family: var(--ff);
+    font-size: calc(var(--fs) * 1px);
+    line-height: calc(var(--lh) * 1px);
+}
+
+/***/
+html,
+body,
+h1,
+textarea,
+input {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #fff;
+    background: #f8f9fb;
+}
+
+/***/
+@keyframes shake {
+    33% {
+        margin-left: -5px;
+    }
+
+    66% {
+        margin-left: 5px;
+    }
+
+    100% {
+        margin-left: 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    transition: color 200ms;
+}
+
+a,
+a:active,
+a:focus,
+textarea,
+input {
+    outline: none;
+}
+
+tt {
+    display: none;
+}
+
+/***/
+html.f-ibm-plex {
+    --ff: f-ibm-plex, sans-serif;
+    --fs: 11;
+    --fs-head: 12.5;
+    --lw: calc(20 * var(--fs) + 40);
+    /* .list width */
+}
+
+/***/
+html.f-open-sans {
+    --ff: f-open-sans, sans-serif;
+    --fs: 11;
+    --fs-head: 12.5;
+    --lw: calc(20 * var(--fs) + 50);
+    /* .list width */
+}
+
+/***/
+html.f-segoe-ui {
+    --ff: f-segoe-ui, sans-serif;
+    --fs: 11;
+    --fs-head: 13;
+    --fs-nops: 8;
+    --lw: calc(22 * var(--fs) + 40);
+    /* .list width */
+}
+
+/***/
+html.f-maven-pro {
+    --ff: f-maven-pro, sans-serif;
+    --fs: 12;
+    --fs-head: 13;
+    --lw: calc(20 * var(--fs) + 47);
+    /* .list width */
+}
+
+/***/
+body.dragging {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/***/
+.ding {
+    animation-name: shake;
+    animation-duration: 200ms;
+}
+
+.no-user-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

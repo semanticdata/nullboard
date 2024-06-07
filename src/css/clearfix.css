@@ -1,0 +1,11 @@
+/***/
+.clearfix:after,
+.board:after,
+.lists:after,
+.notes:after,
+.head:after,
+.menu:after {
+    content: "";
+    display: table;
+    clear: both;
+}

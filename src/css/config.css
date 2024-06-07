@@ -1,0 +1,311 @@
+/***/
+.config {
+    position: absolute;
+    top: 10px;
+    right: 21px;
+    line-height: calc(19 / 11);
+    z-index: 3;
+    background: #f8f9fb;
+}
+
+.crowded .config:hover,
+.crowded.adjusting .config {
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.config a {
+    display: block;
+    color: #000;
+    transition: color 200ms;
+}
+
+.config a:hover {
+    color: #1489db;
+}
+
+.config .teaser {
+    padding: 5px;
+    color: #999;
+    position: relative;
+}
+
+.config .teaser i {
+    /* backups off */
+    font-style: normal;
+}
+
+.config .teaser u {
+    /* backups on */
+    display: none;
+    text-decoration: none;
+}
+
+.config .bulk {
+    margin-right: 20px;
+    padding: 5px 0 0 22px;
+    transition: opacity 400ms;
+}
+
+.config .bulk .boards {
+    display: none;
+    padding: 6px 2px;
+    margin: 6px -2px;
+    border-top: 1px solid #00000028;
+    border-bottom: 1px solid #00000028;
+}
+
+.config .bulk .boards a.load-board {
+    display: block;
+    padding-left: 5px;
+    margin-left: -5px;
+    transition: none;
+}
+
+.config .bulk .boards a.load-board.active {
+    color: #1489db;
+}
+
+.config .bulk .boards a.load-board.active:before {
+    content: "\2022 ";
+    display: inline-block;
+    width: 13px;
+    margin-left: -13px;
+}
+
+.config .bulk .boards a.load-board.active:hover {
+    color: #000;
+}
+
+.config .bulk .boards a.load-board.dragging {
+    background: #dde1e5;
+    border-radius: 2px;
+    color: transparent;
+    transition: none;
+    box-shadow: 0 0 1px #0002 inset;
+}
+
+.config .bulk .boards a.load-board.dragging.active:before {
+    content: "";
+}
+
+.load-dragster {
+    z-index: 10;
+    position: absolute;
+    opacity: 0;
+    line-height: calc(19 / 11);
+    padding-left: 5px;
+    background: #fff;
+    color: #000;
+    border-radius: 2px;
+    cursor: move;
+    outline: 1px solid #acb4bc;
+    box-shadow: 0px 1px 3px #00000030;
+}
+
+.config .bulk a i,
+.config .bulk a b {
+    font-style: normal;
+    font-weight: inherit;
+}
+
+.config .bulk a i {
+    display: none;
+}
+
+.config .bulk .break {
+    padding: 6px 2px 0;
+    margin: 6px -2px 0;
+    border-top: 1px solid #00000028;
+}
+
+/***/
+.config .bulk input.imp-board-select {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    visibility: hidden;
+}
+
+/***/
+.config.backups-on .teaser i {
+    display: none;
+}
+
+.config.backups-on .teaser u {
+    display: inline-block;
+    font-size: calc(8rem / 11);
+    color: #555;
+}
+
+.config.backups-on.backing-up .teaser u {
+    opacity: 0.4;
+}
+
+.config.backups-on .bulk .auto-backup:before {
+    content: "\2713 ";
+    display: inline-block;
+    width: 15px;
+    margin-left: -15px;
+}
+
+/***/
+.config.backups-on.backup-err .teaser i {
+    display: inline-block;
+}
+
+.config.backups-on.backup-err .teaser u {
+    display: inline-block;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 10px;
+    top: 13px;
+    right: -4px;
+    background: #d20;
+    color: transparent;
+}
+
+.config.backups-on.backup-err .bulk .auto-backup {
+    color: #d20;
+}
+
+.config.backups-on.backup-err .bulk .auto-backup:before {
+    content: "! ";
+    color: #d20;
+    width: 13px;
+    margin-left: -13px;
+}
+
+/***/
+
+.config .bulk .section .title {
+    text-align: center;
+    width: 0;
+    display: inline-block;
+    white-space: pre;
+    transition: width 250ms, padding 250ms;
+}
+
+.config .bulk .section .title u {
+    text-decoration: none;
+    transition: opacity 100ms;
+}
+
+.config .bulk .section .details {
+    height: 0;
+    opacity: 0;
+    transition: opacity 250ms;
+    padding-right: 8px;
+    margin-right: -8px;
+}
+
+/***/
+.config .bulk .section.open {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #00000028;
+}
+
+.crowded .config .bulk .section.open {
+    border-bottom: none;
+}
+
+.config .bulk .section.open .title {
+    width: 100%;
+    font-weight: 500;
+    padding-left: 5px;
+    transition: width 250ms, padding 250ms;
+}
+
+.config .bulk .section.open .title u {
+    opacity: 0;
+    transition: opacity 100ms;
+}
+
+.config .bulk .section.open .details {
+    height: 100%;
+    opacity: 1;
+    transition: opacity 250ms;
+}
+
+/***/
+.config .bulk .ui-prefs .f-prefs table {
+    width: 10px;
+    /* mobile safari */
+    padding: 0;
+    margin: 0;
+    border-collapse: collapse;
+}
+
+.config .bulk .ui-prefs .f-prefs td {
+    margin: 0;
+    padding: 0 0 0 5px;
+}
+
+.config .bulk .ui-prefs .f-prefs td.name {
+    width: 100%;
+    white-space: pre;
+    padding-left: 0;
+}
+
+.config .bulk .ui-prefs .f-prefs tr td.val {
+    text-align: center;
+}
+
+.fs-set .config .bulk .ui-prefs .f-prefs tr.ui-fs td.val,
+.lh-set .config .bulk .ui-prefs .f-prefs tr.ui-lh td.val,
+.lw-set .config .bulk .ui-prefs .f-prefs tr.ui-lw td.val {
+    color: #1489db;
+    cursor: pointer;
+}
+
+.config .bulk .ui-prefs .f-prefs a {
+    display: inline-block;
+    padding: 0 2px;
+    transition: padding 250ms;
+}
+
+.config .bulk .ui-prefs .f-prefs a.less:hover {
+    padding: 0 4px 0 0;
+    transition: padding 250ms;
+}
+
+.config .bulk .ui-prefs .f-prefs a.more:hover {
+    padding: 0 0 0 4px;
+    transition: padding 250ms;
+}
+
+.config .bulk .ui-prefs .f-prefs a.more:hover {
+    padding: 0 0 0 4px;
+    transition: padding 250ms;
+}
+
+/***/
+.config .bulk .ui-prefs .switch-font.active:before {
+    content: "\2022 ";
+    display: inline-block;
+    width: 13px;
+    margin-left: -13px;
+}
+
+/***/
+.config .bulk {
+    display: none;
+    opacity: 0;
+}
+
+.config:hover .teaser,
+.adjusting .config .teaser {
+    display: none;
+}
+
+.config:hover .bulk,
+.adjusting .config .bulk {
+    display: block;
+    opacity: 1;
+}
+
+/***/
+.adjusting * {
+    cursor: row-resize !important;
+}

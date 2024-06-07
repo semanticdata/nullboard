@@ -1,0 +1,18 @@
+/***/
+.note-dragster {
+    z-index: 2;
+    position: absolute;
+    opacity: 0;
+    background: #fff;
+    white-space: pre-wrap;
+    cursor: move;
+
+    padding: 5px 25px 6px 10px;
+
+    box-shadow: 0 +1px 0 #acb4bc inset, 0 -1px 0 #acb4bc inset,
+        +1px 0 0 #acb4bc inset, -1px 0 0 #acb4bc inset, 0px 1px 3px #00000030;
+}
+
+.note-dragster a {
+    color: #000;
+}

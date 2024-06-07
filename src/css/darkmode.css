@@ -1,0 +1,220 @@
+/*
+	 *	Dark mode
+	 */
+.theme-dark body {
+    background: #09090a;
+    color: #d6d6d6;
+}
+
+.theme-dark .board .head {
+    background: #17171a;
+}
+
+/***/
+.theme-dark .board .menu {
+    background: linear-gradient(to right, #17171a00, #17171a 10px);
+}
+
+.theme-dark .board .menu a {
+    color: #aaa;
+}
+
+.theme-dark .board .menu a:hover {
+    color: #fc4;
+}
+
+.theme-dark .board .menu a.warn:hover,
+.theme-dark .board .ops a.warn:hover {
+    color: #fc5555 !important;
+    text-shadow: 0 0 1px #fc555544;
+}
+
+.theme-dark .board .head {
+    color: #eee;
+}
+
+.theme-dark .board .head .edit::placeholder {
+    color: #bf9d21;
+}
+
+.theme-dark .board>.head {
+    box-shadow: 0 0 2px #fff1 inset;
+}
+
+/***/
+.theme-dark .board .list {
+    background: #17171a;
+    box-shadow: 0 0 2px #fff1 inset;
+}
+
+.theme-dark .board .note {
+    background: linear-gradient(#242426, #202022);
+    box-shadow: 0 1px 3px #000a;
+    text-shadow: 0 0 4px #0008;
+}
+
+.theme-dark .reveal .board .head .text a,
+.theme-dark .reveal .board .note .text a {
+    color: #fc0;
+}
+
+@keyframes whoomp-dark {
+    0% {
+        color: inherit;
+    }
+
+    30% {
+        color: #fff;
+    }
+
+    100% {
+        color: inherit;
+    }
+}
+
+.theme-dark .board .head .text a:hover,
+.theme-dark .board .note .text a:hover {
+    animation-name: whoomp-dark;
+}
+
+.theme-dark .board .note.raw {
+    background: transparent;
+    box-shadow: none;
+}
+
+.theme-dark .board .note.raw .text {
+    color: #eee;
+    text-shadow: 0 0 4px #0008;
+}
+
+.theme-dark .board .note .ops .teaser {
+    color: #ccc;
+}
+
+.theme-dark .board .note .ops .bulk {
+    background: #202022;
+    border-left: 1px solid #111;
+    border-bottom: 1px solid #111;
+}
+
+.theme-dark .board .note.raw .ops .bulk {
+    border: none;
+}
+
+.theme-dark .board .note .ops .bulk a {
+    color: #ccc;
+}
+
+.theme-dark .board .note .ops .bulk a:hover {
+    color: #fc2;
+}
+
+/***/
+.theme-dark .board .note.dragging,
+.theme-dark .board .note.dragging.raw {
+    background: #09090a;
+    outline: 1px solid #fff2;
+}
+
+.theme-dark .note-dragster {
+    box-shadow: 0px 1px 4px #000;
+    background: linear-gradient(#242426, #202022);
+    outline: 1px solid #fc28;
+}
+
+.theme-dark .note-dragster a {
+    color: #d6d6d6;
+}
+
+/***/
+.theme-dark .wrap textarea,
+.theme-dark .wrap input {
+    background: #111315;
+    color: #eee;
+}
+
+.theme-dark .board .head.editing .edit {
+    outline: 1px solid #bc9908;
+}
+
+.theme-dark .board .note.editing {
+    background: #111315;
+    outline: 1px solid #bc9908;
+}
+
+/***/
+.theme-dark .logo a {
+    color: #ccc;
+}
+
+.theme-dark .logo,
+.theme-dark.crowded .logo:hover {
+    background: #09090a !important;
+}
+
+.theme-dark .logo a:hover {
+    color: #fc2;
+}
+
+.theme-dark .logo>a:hover {
+    color: #fff;
+}
+
+/***/
+.theme-dark .config,
+.theme-dark.crowded .config:hover {
+    background: #09090a !important;
+}
+
+.theme-dark .config a {
+    color: #ddd;
+}
+
+.theme-dark .config a:hover {
+    color: #fc2;
+}
+
+.theme-dark .config .bulk .boards {
+    border-top: 1px solid #fff2;
+    border-bottom: 1px solid #fff2;
+}
+
+.theme-dark .config .bulk .boards a.load-board.active {
+    color: #fc2;
+}
+
+.theme-dark .config .bulk .boards a.load-board.active:hover {
+    color: #ddd;
+}
+
+.theme-dark .config .bulk .break {
+    border-top: 1px solid #fff2;
+}
+
+.theme-dark.fs-set .config .bulk .ui-prefs .f-prefs tr.ui-fs td.val,
+.theme-dark.lh-set .config .bulk .ui-prefs .f-prefs tr.ui-lh td.val,
+.theme-dark.lw-set .config .bulk .ui-prefs .f-prefs tr.ui-lw td.val {
+    color: #fc2;
+}
+
+.theme-dark .config a.switch-theme i {
+    display: inline;
+}
+
+.theme-dark .config a.switch-theme b {
+    display: none;
+}
+
+/***/
+.theme-dark .config .bulk .boards .load-board.dragging,
+.theme-dark .config .bulk .boards .load-board.active.dragging {
+    background: #fff2;
+    color: transparent;
+}
+
+.theme-dark .load-dragster {
+    background: #09090a;
+    box-shadow: 0px 2px 4px #000;
+    outline: 1px solid #fc2a;
+    color: #ddd;
+}
