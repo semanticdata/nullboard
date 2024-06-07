@@ -19,7 +19,8 @@ window.addEventListener("error", function (e) {
  *	notes / lists / boards
  */
 function addNote($list, $after, $before) {
-  var $note = $("pre .note").clone();
+  var $note = $("tt .note").clone();
+  // var $note = $("pre .note").clone();
   var $notes = $list.find(".notes");
 
   $note.find(".text").html("");
@@ -64,7 +65,8 @@ function noteLocation($item) {
 function addList() {
   var $board = $(".wrap .board");
   var $lists = $board.find(".lists");
-  var $list = $("pre .list").clone();
+  var $list = $("tt .list").clone();
+  // var $list = $("pre .list").clone();
 
   $list.find(".text").html("");
   $list.find(".head").addClass("brand-new");
@@ -286,9 +288,12 @@ function showBoard(quick) {
   var board = NB.board;
 
   var $wrap = $(".wrap");
-  var $bdiv = $("pre .board");
-  var $ldiv = $("pre .list");
-  var $ndiv = $("pre .note");
+  var $bdiv = $("tt .board");
+  var $ldiv = $("tt .list");
+  var $ndiv = $("tt .note");
+  // var $bdiv = $("pre .board");
+  // var $ldiv = $("pre .list");
+  // var $ndiv = $("pre .note");
 
   var $b = $bdiv.clone();
   var $b_lists = $b.find(".lists");
@@ -618,7 +623,8 @@ function configBackups() {
   if (conf.backups.agents.length != 2) throw "Invalid conf.backups.agents[]"; // as per fixupConfig()
 
   //
-  var $div = $("pre .backup-conf").clone();
+  var $div = $("tt .backup-conf").clone();
+  // var $div = $("pre .backup-conf").clone();
   var div = $div[0];
 
   var $loc = $div.find(".loc");
@@ -859,7 +865,8 @@ function updateBoardIndex() {
   var $index = $(".config .boards");
   var $export = $(".config .exp-board");
   var $backup = $(".config .auto-backup");
-  var $entry = $("pre .load-board");
+  var $entry = $("tt .load-board");
+  // var $entry = $("pre .load-board");
 
   var $board = $(".wrap .board");
   var id_now = NB.board && NB.board.id;
@@ -929,7 +936,8 @@ function jsonClone(x) {
 }
 
 function htmlEncode(raw) {
-  return $("pre .encoder").text(raw).html();
+  return $("tt .encoder").text(raw).html();
+  // return $("pre .encoder").text(raw).html();
 }
 
 function setText($note, text) {
@@ -1882,14 +1890,16 @@ $(window).keydown(function (ev) {
 });
 
 $(".view-about").click(function () {
-  var $div = $("pre .about").clone();
+  var $div = $("tt .about").clone();
+  // var $div = $("pre .about").clone();
   $div.find("div").html(`Version ${NB.codeVersion}`);
   showOverlay($div);
   return false;
 });
 
 $(".view-license").click(function () {
-  var $div = $("pre .license").clone();
+  var $div = $("tt .license").clone();
+  // var $div = $("pre .license").clone();
   $div.html(formatLicense());
   showOverlay($div);
   return false;
