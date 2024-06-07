@@ -1160,7 +1160,8 @@ function adjustLayout() {
     var max = Math.floor((body_w - 15) / (list_w + 15));
     // var max = Math.floor((body_w - 40) / (list_w + 10));
     max = max < 2 ? list_w : (list_w + 10) * max - 10;
-    // $board.css("max-width", max + "px");
+    // max = max < 2 ? list_w : (list_w + 10) * max - 10;
+    $board.css("max-width", max + "px");
     $body.addClass("crowded");
   }
 }
