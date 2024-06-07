@@ -67,8 +67,7 @@ input {
 }
 
 /* Added pre */
-tt,
-pre {
+tt, pre {
     display: none;
 }
 
