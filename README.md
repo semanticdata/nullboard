@@ -13,7 +13,7 @@ Nullboard is a minimalist take on a kanban board / a task list manager, designed
 
 <div align=center>
 
-| ![screenshot](images/nullboard-example-alt.png) |
+| ![screenshot](.github/images/nullboard-example-alt.png) |
 | --- |
 </div>
 
@@ -37,51 +37,51 @@ Nullboard is a minimalist take on a kanban board / a task list manager, designed
 
 The whole thing is largely about making it convenient to use. Everything is editable in place, all changes are saved automatically and the last 50 revisions are kept for undo/redo:
 
-![In-place editing](images/nullboard-inplace-editing.gif)
+![In-place editing](.github/images/nullboard-inplace-editing.gif)
 
 New notes can be quickly added directly where they are needed, e.g. before or after existing notes:
 
-![Ctrl-add note](images/nullboard-ctrl-add-note.gif)
+![Ctrl-add note](.github/images/nullboard-ctrl-add-note.gif)
 
 Notes can also be dragged around, including to and from other lists:
 
-![Drag-n-drop](images/nullboard-drag-n-drop.gif)
+![Drag-n-drop](.github/images/nullboard-drag-n-drop.gif)
 
 Lists can be moved around as well, though not as flashy as notes:
 
-![List swapping](images/nullboard-list-swap.gif)
+![List swapping](.github/images/nullboard-list-swap.gif)
 
 Nearly all controls are hidden by default to reduce visual clutter to its minimum:
 
-![Hidden controls](images/nullboard-hidden-controls.gif)
+![Hidden controls](.github/images/nullboard-hidden-controls.gif)
 
 Longer notes can be collapsed to show just the first line, for even more compact view of the board:
 
-![Collapsed notes](images/nullboard-collapsed-notes.gif)
+![Collapsed notes](.github/images/nullboard-collapsed-notes.gif)
 
 Notes can also be set to look different. This can be used to partitioning lists into sections:
 
-![Raw notes](images/nullboard-raw-notes.gif)
+![Raw notes](.github/images/nullboard-raw-notes.gif)
 
 Links starting with `https://` and `http://` are recognized. They will "pulse" on mouse hover and can be opened via the right-click menu.
 
-![Links on hover](images/nullboard-links-on-hover.gif)
+![Links on hover](.github/images/nullboard-links-on-hover.gif)
 
 Pressing CapsLock will highlight all links and make them left-clickable.
 
-![Links reveal](images/nullboard-links-reveal.gif)
+![Links reveal](.github/images/nullboard-links-reveal.gif)
 
 The default font is [Barlow](https://tribby.com/fonts/barlow/) - it's both narrow *and* still very legible. Absolutely fantastic design!
 
-![Barlow speciment](images/barlow-specimen.png)
+![Barlow speciment](.github/images/barlow-specimen.png)
 
 The font can be changed; its size and line height can be adjusted:
 
-![Theme and zoom](images/nullboard-ui-preferences.gif)
+![Theme and zoom](.github/images/nullboard-ui-preferences.gif)
 
 The color theme can be inverted:
 
-![Dark theme](images/nullboard-dark-theme.gif)
+![Dark theme](.github/images/nullboard-dark-theme.gif)
 
 Also features:
 

@@ -1,18 +1,17 @@
 html {
     --ff: f-barlow, sans-serif;
 
-    --fs: 14;
-    /* default: 11 */
+    --fs: 18;
     /* font-size   */
     --lh: calc(var(--fs) * 1.25);
     /* line-height */
-    --fs-head: 14;
+    --fs-head: 16;
     /* font-size of board heading */
-    --fs-nops: 9;
+    --fs-nops: 10;
     /* font-size of the note ops */
-    --lw: calc(20 * var(--fs) + 100)
-        /* --lw: calc(20 * var(--fs) + 30) */
-        /* .list width */
+    --lw: calc(20 * var(--fs) + 30);
+    /* --lw: calc(20 * var(--fs) + 30); */
+    /* .list width */
 }
 
 html,
@@ -20,8 +19,9 @@ body,
 input,
 textarea {
     font-family: var(--ff);
-    font-size: calc(var(--fs) * 1px);
-    line-height: calc(var(--lh) * 1px);
+    /* font-size: calc(var(--fs) * 1px); */
+    /* line-height: calc(var(--lh) * 1px); */
+    /* line-height: 1.25; */
 }
 
 /***/
@@ -136,3 +136,7 @@ body.dragging {
 }
 
 /* CUSTOM CSS PAST HERE */
+header {
+    display: flex;
+    justify-content: space-between;
+}

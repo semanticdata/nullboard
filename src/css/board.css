@@ -12,7 +12,7 @@
     margin-inline: auto;
     /* margin: 0 auto; */
 /*     padding: 1.5rem; */
-    padding: 20px;
+    /* padding: 20px; */
 
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -23,8 +23,8 @@
 }
 
 .crowded .board {
-/*     margin-top: 2.5rem; */
-    margin-top: 28px;
+    /* margin-top: 2.5rem; */
+    margin-top: 1rem;
 }
 
 .board u {
@@ -34,9 +34,9 @@
 .board u:before {
     content: "\00D7";
     position: relative;
-    top: 2px;
-    font-size: calc(16rem / 11);
-    line-height: calc(10 / 17);
+    /* top: 2px; */
+    /* font-size: calc(16rem / 11); */
+    /* line-height: calc(10 / 17); */
     font-weight: 400;
 }
 
@@ -44,14 +44,14 @@
 .board .head {
     padding: 5px 0;
     margin: 1px 5px 0;
-    position: relative;
+    /* position: relative; */
 }
 
 .board .head .text,
 .board .head .edit {
     font-weight: 500;
     font-size: calc(var(--fs-head) / 11 * 1rem);
-    line-height: calc(20 / var(--fs-head));
+    /* line-height: calc(20 / var(--fs-head)); */
     padding: 0 5px 2px;
     border: none;
 }
@@ -68,8 +68,8 @@
 
 .board .head .edit::placeholder {
     font-weight: 400;
-    font-size: calc(10rem / 11);
-    line-height: calc(22 / 10);
+    /* font-size: calc(10rem / 11); */
+    /* line-height: calc(22 / 10); */
     text-transform: uppercase;
     color: #1489db;
     opacity: 0.8;
@@ -91,7 +91,7 @@
     height: 20px;
     padding: 5px 6px 7px 30px;
     background: linear-gradient(to right, #eaedf000, #eaedf0 10px);
-    line-height: calc(20 / 11);
+    /* line-height: calc(20 / 11); */
 }
 
 .board .menu a,
