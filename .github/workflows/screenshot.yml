@@ -1,0 +1,28 @@
+name: Take Website Screenshot
+
+on:
+  workflow_dispatch:
+  # push: { branches: ["main"] }
+
+permissions:
+  contents: write
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+    - name: Remove previous screenshot
+      run: rm -f screenshot.png
+    - name: Commit the removal
+      uses: stefanzweifel/git-auto-commit-action@v5
+    - name: Take site screenshot
+      uses: karol-brejna-i/webpage-screenshot-action@v1
+      with:
+        output: screenshot.png
+        url: https://semanticdata.github.io/nullboard
+    - name: Commit new screenshot
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: Commit from screenshot workflow
