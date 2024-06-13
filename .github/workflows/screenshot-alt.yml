@@ -1,4 +1,4 @@
-name: Take Website Screenshot
+name: Take Website Screenshot - Alt
 
 on:
   workflow_dispatch:
