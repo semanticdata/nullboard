@@ -2,12 +2,8 @@
 
 Nullboard is a minimalist take on a kanban board / a task list manager, designed to be compact, readable, and quick in use. The name also happens to abbreviate to [NB](https://en.wikipedia.org/wiki/Nota_bene), which I think is a nice touch.
 
-<p align=left>
-<br />
 <a href="https://semanticdata.github.io/nullboard/">
-<img src="https://img.shields.io/badge/Check%20out%20the%20Demo-F0E68C?style=for-the-badge&link=https%3A%2F%2Fsemanticdata.github.io%2Fnullboard%2F" alt="demo" height="34px"; />
-</a>
-</p>
+<img src="https://img.shields.io/badge/Check out the Demo-F0E68C?style=for-the-badge&link=https://semanticdata.github.io/nullboard/" alt="demo" height="34px"; /></a>
 
 ## 🖼 Screenshot
 
@@ -96,11 +92,11 @@ Also features:
 * Works in Firefox, tested in Chrome, should work in Safari and may work in Edge (or what it's called now).
 * Uses localStorage for storing boards/lists/notes, so be careful around [clearing your cache](https://stackoverflow.com/questions/9948284/how-persistent-is-localstorage).
 
-## 🔁 Changelog
+## 🔀 Changelog
 
-The changelog can be found here: 👉 <https://nullboard.io/changes>.
+The upstream changelog can be found here: 👉 <https://nullboard.io/changes>.
 
-## 🗺 Roadmap - Changes from Upstream
+## 🔄 Changes from Upstream
 
 | Change description |       |
 | ------------------ | :---: |
