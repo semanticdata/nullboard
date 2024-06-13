@@ -17,6 +17,8 @@ jobs:
       run: rm -f screenshot.png
     - name: Commit the removal
       uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: Screenshot Workflow - Delete screenshot
     - name: Take site screenshot
       uses: karol-brejna-i/webpage-screenshot-action@v1
       with:
@@ -26,4 +28,4 @@ jobs:
     - name: Commit new screenshot
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
-        commit_message: Commit from screenshot workflow
+        commit_message: Screenshot Workflow - New screenshot
