@@ -1,4 +1,4 @@
-<h1><img src="src/favicon-16.png" alt="icon" height="24px" /> Nullboard</h1>
+<h1><img src="src/favicon-16.png" alt="icon" height="28px" /> Nullboard</h1>
 
 Nullboard is a minimalist take on a kanban board / a task list manager, designed to be compact, readable, and quick in use. The name also happens to abbreviate to [NB](https://en.wikipedia.org/wiki/Nota_bene), which I think is a nice touch.
 
