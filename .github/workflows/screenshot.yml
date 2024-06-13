@@ -1,0 +1,40 @@
+name: Take Website Screenshot
+
+on:
+  workflow_dispatch:
+  # push: { branches: ["main"] }
+
+permissions:
+  contents: write
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      # - name: Display structure of downloaded files
+      #   run: ls -R
+      - name: Remove old screenshots directory
+        run: rm -rf screenshots
+      # - name: Display structure of downloaded files
+      #   run: ls -R
+      - name: Commit removal
+        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Install puppeteer-headful
+        uses: mujo-code/puppeteer-headful@master
+        env:
+          CI: true
+      - name: screenshots-ci-action
+        uses: flameddd/screenshots-ci-action@master
+        with:
+          url: https://semanticdata.github.io/nullboard/
+          type: png
+          noCommitHashFileName: true
+          # fullPage: true
+          # noDesktop: true
+          # devices: iPhone 6,iPhone 6 landscape,iPad Pro landscape
+      # - name: Display structure of downloaded files
+      #   run: ls -R
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
